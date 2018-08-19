@@ -54,10 +54,11 @@ public class splashscreen extends AppCompatActivity {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-       handler.removeCallbacks( null );
+    public void onBackPressed() {
+        super.onBackPressed();
         root1.cancelAnimation();
+       handler.removeCallbacksAndMessages( null );
+
 
 
     }
